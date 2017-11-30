@@ -5,7 +5,7 @@
     
     $("body").prepend($modal);
 
-    $('a').click(function (e) {
+    $(document).on("click", "a", function (e) {
         e.preventDefault();
         $( "#dialog" ).dialog();
     });
