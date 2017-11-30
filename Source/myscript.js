@@ -14,6 +14,7 @@
                 title: "App ID:"+href,
                 resizable: false,
                 modal: true,
+                zindex: 1001,
                 open: function(){$("body").css("overflow", "hidden");},
                 close: function(){$("body").css("overflow", "auto");}
             });
