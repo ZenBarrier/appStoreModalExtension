@@ -7,8 +7,9 @@
 
     $(document).on("click", "a", function (e) {
         var googleReg = /\S*play(?:.|%2E)google(?:.|%2E)com\S*id(?:=|%3D)([\w.]*)\S*/i;
+        var appleReg = /\S*itunes(?:\.|%2E)apple(?:\.|%2E)com\S*id(\w+)\S*/i;
         var href = $(this).attr('href');
-        if (googleReg.test(href)) {
+        if (googleReg.test(href) || appleReg.test(href)) {
             e.preventDefault();
             $("#dialog").dialog();
         }
