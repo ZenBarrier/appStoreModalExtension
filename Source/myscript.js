@@ -1,28 +1,12 @@
 (function () {
-    $modal = '<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">' +
-            '<div class="modal-dialog" role="document">' +
-            '<div class="modal-content">' +
-            '<div class="modal-header">' +
-            '<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>' +
-            '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' +
-            '<span aria-hidden="true">&times;</span>' +
-            '</button>' +
-            '</div>' +
-            '<div class="modal-body">' +
-            '...' +
-            '</div>' +
-            '<div class="modal-footer">' +
-            '<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>' +
-            '<button type="button" class="btn btn-primary">Save changes</button>' +
-            '</div>' +
-            '</div>' +
-            '</div>' +
+    $modal = '<div id="dialog" title="Basic dialog">' +
+            '<p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the x icon.</p>' +
             '</div>"';
     
     $("body").prepend($modal);
 
     $('a').mousedown(function () {
-        $( "#myModal" ).modal();
+        $( "#dialog" ).dialog();
     });
 
 })();

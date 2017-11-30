@@ -17,7 +17,7 @@
             
         }
     ],
-    "web_accessible_resources":["fonts/*"],
+    "web_accessible_resources":["jquery/images/*"],
 
     "browser_action": {
         "default_icon": "icon.png",
