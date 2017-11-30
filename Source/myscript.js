@@ -6,8 +6,12 @@
     $("body").prepend($modal);
 
     $(document).on("click", "a", function (e) {
-        e.preventDefault();
-        $( "#dialog" ).dialog();
+        var googleReg = /\S*play(?:.|%2E)google(?:.|%2E)com\S*id(?:=|%3D)([\w.]*)\S*/i;
+        var href = $(this).attr('href');
+        if (googleReg.test(href)) {
+            e.preventDefault();
+            $("#dialog").dialog();
+        }
     });
 
 })();
