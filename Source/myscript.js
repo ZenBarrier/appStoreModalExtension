@@ -11,7 +11,10 @@
         var href = $(this).attr('href');
         if (googleReg.test(href) || appleReg.test(href)) {
             e.preventDefault();
-            $("#dialog").dialog();
+            $("#dialog").dialog({
+                resizable: false,
+                modal: true
+            });
         }
     });
 

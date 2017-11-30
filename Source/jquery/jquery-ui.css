@@ -1302,9 +1302,9 @@ a.ui-button:active,
 
 /* Overlays */
 .ui-widget-overlay {
-	background: #aaaaaa;
-	opacity: .003;
-	filter: Alpha(Opacity=.3); /* support: IE8 */
+	background: #2b2b2b !important;
+	opacity: .6 !important;
+	filter: Alpha(Opacity=.6) !important; /* support: IE8 */
 }
 .ui-widget-shadow {
 	-webkit-box-shadow: 0px 0px 5px #666666;
