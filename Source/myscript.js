@@ -19,7 +19,7 @@
             '</div>' +
             '</div>"';
     
-    $("body").append($modal);
+    $("body").prepend($modal);
 
     $('a').mousedown(function () {
         $( "#myModal" ).modal();
