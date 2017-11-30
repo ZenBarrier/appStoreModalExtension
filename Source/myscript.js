@@ -1,6 +1,5 @@
 (function () {
-    $modal = '<div id="dialog" title="Basic dialog" style="display: none;">' +
-            '<p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the x icon.</p>' +
+    $modal = '<div id="appModal" style="display: none;">' +
             '</div>';
     
     $("body").prepend($modal);
@@ -11,10 +10,14 @@
         var href = $(this).attr('href');
         if (googleReg.test(href) || appleReg.test(href)) {
             e.preventDefault();
-            $("#dialog").dialog({
+            $("#appModal").dialog({
+                title: "App ID:"+href,
                 resizable: false,
-                modal: true
+                modal: true,
+                open: function(){$("body").css("overflow", "hidden");},
+                close: function(){$("body").css("overflow", "auto");}
             });
+            $("#appModal").text(href);
         }
     });
 
