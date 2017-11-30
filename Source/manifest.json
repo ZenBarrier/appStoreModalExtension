@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+
+    "name": "App Store Modal",
+    "description": "This extension shows a popup when you click an app link.",
+    "version": "1.0",
+
+    "permissions": [
+        "tabs", "activeTab"
+    ],
+
+    "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "css": [],
+            "js": ["myscript.js"]
+            
+        }
+    ],
+    "web_accessible_resources":["fonts/*"],
+
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "Click here!"
+    }
+}
